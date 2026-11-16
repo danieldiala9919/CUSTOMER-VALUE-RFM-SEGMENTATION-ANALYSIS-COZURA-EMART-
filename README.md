@@ -218,6 +218,7 @@ To give leadership a single health indicator, the eight segments were grouped in
 
 The "Doing Well %" and "Needs Attention %" KPI cards on the Customer Segmentation page are DAX measures that divide the customers in each group by the customers currently selected, so they update when the Country or Product slicers are used.
 
+[View Report Sheet](./RFM_Analysis_Power_BI_Project.pbix)
 
 
 ---
@@ -249,6 +250,9 @@ Cozura EMart is **profitable and growing**, with \$29.36M in sales at a 41.15% p
 # 5. Insights Deep Dive
 
 The report has seven pages. The Home page and the Insights & Recommendations page are not repeated here because their content appears in the Executive Summary, Takeaway and Recommendations. Each page below is shown first, then every chart with the insights it supports. The figures were recalculated from the underlying data and match the dashboard.
+
+[View Interactive Dashboard](./RFM_Analysis_Dashboard.mp4)
+
 
 ## 5.1: Executive Overview
 
