@@ -276,7 +276,7 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 ### Sales Trend 
 
-<img width="363" height="182" alt="exec_sales_trend" src="https://github.com/user-attachments/assets/3819606e-69cc-47be-bfa9-c02dc92572a8" />
+<img width="700" height="400" alt="exec_sales_trend" src="https://github.com/user-attachments/assets/3819606e-69cc-47be-bfa9-c02dc92572a8" />
 
 
 - Sales rose from **\$2.99M in 2005 to \$10.42M in 2008**, more than three times higher, with each year above the one before it.
@@ -349,35 +349,41 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 ###  Needs Attention % and Doing Well %
 
-![Needs Attention % and Doing Well % KPI cards](images/seg_kpi_cards.png)
+<img width="622" height="140" alt="seg_kpi_cards" src="https://github.com/user-attachments/assets/efaf24c5-eb86-46fc-b356-7a5aafe85389" />
+
+
 
 - **55.77% of customers (10,309) are at risk or need attention** and **44.23% (8,175) are doing well**.
 - "Doing well" customers account for 54.0% of historic revenue and the other group for 46.0% (\$13.51M), so the group needing attention represents a lot of money, not just a lot of people.
 
-### Customer Segment Count (bar chart)
+### Customer Segment Count 
 
-![Customer segment count](images/seg_segment_count.png)
+<img width="774" height="474" alt="seg_segment_count" src="https://github.com/user-attachments/assets/1e60376f-11f8-4567-b981-b31d297a802f" />
+
 
 - **Hibernating (4,103, 22.2%)** is the largest segment, followed by New Customers (3,685, 19.9%) and Need Attention (2,917, 15.8%). Only 8.5% are Champions and 4.2% Loyal.
 - The customer base is wide at the bottom and narrow at the top. Hibernating and New customers together are 42.1% of the base but contribute just 4.1% of revenue.
 
-### Customer Segment by Average Recency (bar chart, days since last order)
+### Customer Segment by Average Recency (days since last order)
 
-![Average recency by segment](images/seg_avg_recency.png)
+<img width="774" height="402" alt="seg_avg_recency" src="https://github.com/user-attachments/assets/00b0f3aa-69fd-413b-81cc-72a0e3566787" />
+
 
 - **At Risk customers have been away for 401 days on average**, more than 13 months, followed by Hibernating (290) and Can't Lose Them (284). Their window for an easy win-back is closing.
 - Champions (76 days), Potential Loyalists (72) and New Customers (70) all bought within the last quarter, which is why they score well on recency.
 
-###  Customer Segment by Average Frequency (bar chart, orders per customer)
+###  Customer Segment by Average Frequency (orders per customer)
 
-![Average frequency by segment](images/seg_avg_frequency.png)
+<img width="774" height="418" alt="seg_avg_frequency" src="https://github.com/user-attachments/assets/0388a2cf-d53a-41d5-b1bd-05cdac342b87" />
+
 
 - **Champions average 2.97 orders** and Loyal Customers 2.39, while Hibernating customers average 1.03, in effect a single purchase.
 - Even the best customers order only about three times, so loyalty is shallow across the whole base. That explains the low company average of 1.5 orders per customer.
 
-###  Customer Segment by Average Monetary Value (bar chart, spend per customer)
+###  Customer Segment by Average Monetary Value (spend per customer)
 
-![Average monetary value by segment](images/seg_avg_monetary.png)
+<img width="774" height="474" alt="seg_avg_monetary" src="https://github.com/user-attachments/assets/5ba6d3a9-0fd4-4ccb-95c7-541b57e93a0d" />
+
 
 - Loyal Customers (\$5,524), **Can't Lose Them (\$5,225)** and Champions (\$4,956) are the highest spenders. Hibernating (\$159) and New Customers (\$150) spend very little.
 - **Can't Lose Them are lapsed Champions.** They spent as much as Champions but last bought about 9 months ago. These 1,273 customers (6.9% of the base) hold **\$6.65M (22.7%) of historic revenue**.
