@@ -251,7 +251,7 @@ Cozura EMart is **profitable and growing**, with \$29.36M in sales at a 41.15% p
 
 The report has seven pages. The Home page and the Insights & Recommendations page are not repeated here because their content appears in the Executive Summary, Takeaway and Recommendations. Each page below is shown first, then every chart with the insights it supports. The figures were recalculated from the underlying data and match the dashboard.
 
-[View Interactive Dashboard](./RFM_Analysis_Dashboard.mp4)
+[View Interactive Dashboard](https://drive.google.com/file/d/1i28lpUCG-D5fGwV6rPsti2Wij9koDWF1/view?usp=sharing)
 
 
 ## 5.1: Executive Overview
