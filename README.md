@@ -16,20 +16,8 @@
   - [Analysis focus areas](#analysis-focus-areas)
 - [2. Data Structure & Initial Checks](#2-data-structure--initial-checks)
 - [3. Methodology: From Raw Orders to Customer Segments](#3-methodology-from-raw-orders-to-customer-segments)
-  - [3.1 What is RFM analysis?](#31-what-is-rfm-analysis)
-  - [3.2 Approach at a glance](#32-approach-at-a-glance)
-  - [3.3 Step 1: Finding the RFM values](#33-step-1-finding-the-rfm-values)
-  - [3.4 Step 2: Turning values into RFM scores](#34-step-2-turning-values-into-rfm-scores)
-  - [3.5 Step 3: Segmenting customers](#35-step-3-segmenting-customers)
-  - [3.6 Step 4: Customer health groups and marketing actions](#36-step-4-customer-health-groups-and-marketing-actions)
-  - [3.7 Fields, tables and measures created](#37-fields-tables-and-measures-created)
 - [4. Executive Summary](#4-executive-summary)
 - [5. Insights Deep Dive](#5-insights-deep-dive)
-  - [Dashboard 1: Executive Overview](#dashboard-1-executive-overview)
-  - [Dashboard 2: Customer Overview](#dashboard-2-customer-overview)
-  - [Dashboard 3: Customer Segmentation (RFM Analysis)](#dashboard-3-customer-segmentation-rfm-analysis)
-  - [Dashboard 4: Customer Details](#dashboard-4-customer-details)
-  - [Dashboard 5: Marketing Actions](#dashboard-5-marketing-actions)
 - [6. Takeaway](#6-takeaway)
 - [7. Recommendations](#7-recommendations)
 - [8. Assumptions & Caveats](#8-assumptions--caveats)
@@ -90,13 +78,13 @@ The raw data is a star-schema extract with one fact table and five dimension tab
 
 ### Data model (star schema)
 
-![Star schema used for the analysis](images/data_model_star_schema.png)
+<img width="1800" height="930" alt="data_model_star_schema" src="https://github.com/user-attachments/assets/10274c6b-0639-4ce0-bdb1-ade4cb9f0165" />
+
 
 *Star schema used for the analysis. RFM Table and Segment Strategy were created in Power BI.*
 
 *Data cleaning and transformation was done in Power Query to get the dataset ready and suitable for analysis. Details of data quality issues and mitigations are discussed in Section 8.*
 
-[Back to top](#table-of-contents)
 
 ---
 
@@ -230,24 +218,6 @@ To give leadership a single health indicator, the eight segments were grouped in
 
 The "Doing Well %" and "Needs Attention %" KPI cards on the Customer Segmentation page are DAX measures that divide the customers in each group by the customers currently selected, so they update when the Country or Product slicers are used.
 
-## 3.7 Fields, tables and measures created
-
-| **Name**                                                     | **Type**                         | **Purpose**                                                                                   |
-|--------------------------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------|
-| **CustomerName**                                             | Power Query column               | Full name built from first and last name for the customer list                                |
-| **Age, Age Band, Age Band Sort**                             | Calculated columns (DimCustomer) | Age at the last order date (July 2008), grouped into 7 bands (28-34 to 85+) with a sort order |
-| **RFM Table**                                                | Calculated table                 | One row per customer with Recency, Frequency and Monetary values                              |
-| **Recency, Frequency, Monetary Score**                       | Calculated columns (RFM Table)   | Scores from 1 to 5                                                                            |
-| **RFM Score, FM AV.Score**                                   | Calculated columns (RFM Table)   | Three-digit score and the Frequency/Monetary average                                          |
-| **Segment, Segment Sort**                                    | Calculated columns (RFM Table)   | Segment name and display order                                                                |
-| **Segment Strategy**                                         | Calculated table                 | Description, marketing action and Segment Group for each of the 8 segments                    |
-| **Total Revenue, Total Cost, Total Profit, Profit Margin %** | Measures                         | Headline performance KPIs                                                                     |
-| **Total Orders, Active Customers**                           | Measures                         | Distinct orders and distinct buying customers                                                 |
-| **Orders per Customer, Revenue per Customer**                | Measures                         | Average order count and spend per customer                                                    |
-| **Snapshot Date, Last Order Date**                           | Measures                         | Reference dates for recency                                                                   |
-| **Recency Value, Frequency Value, Monetary Value**           | Measures                         | Raw RFM values used by the RFM Table                                                          |
-| **Doing Well %, Needs Attention %**                          | Measures                         | Customer health KPIs                                                                          |
-| **Champions %, At Risk Customers**                           | Measures                         | Supporting measures for Champions and the At Risk plus Can't Lose Them groups                 |
 
 
 ---
@@ -256,7 +226,8 @@ The "Doing Well %" and "Needs Attention %" KPI cards on the Customer Segmentatio
 
 Cozura EMart is **profitable and growing**, with \$29.36M in sales at a 41.15% profit margin. Beneath that growth, **more than half of its customers (55.77%) are at risk or need attention**, about 22% are hibernating, and the **United States, the largest market by sales, is the weakest on customer health**. Customers order only 1.5 times on average, so the biggest opportunity is turning one-time buyers into repeat buyers and winning back valuable customers who have gone quiet.
 
-![Headline performance metrics](images/kpi_headline_metrics.png)
+<img width="1424" height="140" alt="kpi_headline_metrics" src="https://github.com/user-attachments/assets/f530c18f-176d-4ac9-a51b-fcf64b1f81a1" />
+
 
 *Headline performance metrics (Executive Overview page)*
 
@@ -279,122 +250,132 @@ Cozura EMart is **profitable and growing**, with \$29.36M in sales at a 41.15% p
 
 The report has seven pages. The Home page and the Insights & Recommendations page are not repeated here because their content appears in the Executive Summary, Takeaway and Recommendations. Each page below is shown first, then every chart with the insights it supports. The figures were recalculated from the underlying data and match the dashboard.
 
-## Dashboard 1: Executive Overview
+## 5.1: Executive Overview
 
 **Objective:** give leadership a quick read on sales, cost and profit, the best-selling products, the sales trend and where revenue comes from.
 
-![Executive Overview page](images/page_executive_overview.png)
+<img width="991" height="556" alt="page_executive_overview" src="https://github.com/user-attachments/assets/dfcb78d3-1a25-4a20-9cf9-f1e400143a6e" />
+
 
 *Page: Executive Overview*
 
-### 1.1 KPI cards: Sales, Profit, Margin and Cost
+### Sales, Profit, Margin and Cost
 
 - Sales of **\$29.36M** less product cost of **\$17.28M** leave a profit of **\$12.08M**, a **41.15% margin**. Costs take 58.85 cents of every sales dollar.
 - The margin has held up as the business grew: 40.2% in 2005, 40.5% in 2006, 41.6% in 2007 and 41.4% for January to July 2008 (calculated by order date). Growth was not bought with lower margins.
 - The average order is worth about **\$1,061** and the average customer about **\$1,588**, but with only 1.5 orders per customer the second figure is the one with room to grow.
 
-### 1.2 Top Selling Products (bar chart, top 5 by number of orders)
+###  Top Selling Products (top 5 by number of orders)
 
-![Top selling products by number of orders](images/exec_top_selling_products.png)
+<img width="772" height="402" alt="exec_top_selling_products" src="https://github.com/user-attachments/assets/b11d6d31-964e-4e0a-8cb2-4f88b3009b50" />
+
 
 - The **Water Bottle (30 oz) leads with 4,244 orders**, followed by the Patch Kit (3,191), Mountain Tire Tube (3,095), Road Tire Tube (2,376) and Sport-100 Helmet, Red (2,230).
 - All five are low-priced accessories and consumables. Together they appear in about 45% of all orders but bring in only \$131K (0.4% of sales), whereas the Mountain-200 bike range alone generates 27% of sales.
 - The best sellers therefore bring customers through the door and are natural **entry products** to bundle with higher-value bikes, rather than being the main source of revenue.
 
-### 1.3 Sales Trend (ribbon chart, sales by year, highest first)
+### Sales Trend 
 
-![Sales trend by year](images/exec_sales_trend.png)
+<img width="363" height="182" alt="exec_sales_trend" src="https://github.com/user-attachments/assets/3819606e-69cc-47be-bfa9-c02dc92572a8" />
+
 
 - Sales rose from **\$2.99M in 2005 to \$10.42M in 2008**, more than three times higher, with each year above the one before it.
 - Both end years are partial (2005 covers July to December, 2008 covers January to July), which makes the growth stronger than it looks: by order date, January to July 2008 sales of \$9.77M had already matched all of 2007 (\$9.79M).
 - Growth came mainly from **more customers**: customers placing orders rose from 1,013 in 2005 to 2,677, 9,309 and 11,377 in the following years. Acquisition has been strong, which makes the low repeat rate more important.
 
-### 1.4 Total Sales by Country (bubble map)
+### Total Sales by Country
 
-![Total sales by country](images/exec_sales_by_country.png)
+<img width="764" height="782" alt="exec_sales_by_country" src="https://github.com/user-attachments/assets/50298ffb-9df4-428c-bcd1-ec670092337b" />
+
 
 - The **United States (\$9.39M, 32.0%)** and **Australia (\$9.06M, 30.9%)** together produce 62.8% of sales. The UK (\$3.39M), Germany (\$2.89M), France (\$2.64M) and Canada (\$1.98M) follow.
 - Taken as regions, North America (US and Canada) delivers 38.7% of sales and Europe (UK, Germany, France) 30.4%, which is about the same as Australia alone.
 - Australia is the most productive market per customer. It has only 19.4% of customers (3,591) but 30.9% of sales, which means **\$2,523 per customer against \$1,201 in the US** and 1.87 orders per customer against 1.22. The US earns its place through volume (7,819 customers, 42.3% of the base), not depth.
 
-## Dashboard 2: Customer Overview
+## 5.2: Customer Overview
 
 **Objective:** understand who the customers are by gender, marital status and age, and how much each group contributes to sales, so that marketing can be aimed at the right people.
 
-![Customer Overview page](images/page_customer_overview.png)
+<img width="1920" height="1080" alt="page_customer_overview" src="https://github.com/user-attachments/assets/7810c452-d7c4-402f-bd24-e4d57676a559" />
+
 
 *Page: Customer Overview*
 
-### 2.1 KPI cards: Customers and Orders
+###  Customers and Orders
 
 - **18,484 customers** placed **27,659 orders**, an average of 1.50 orders each. About 63% of customers have ordered only once, which frames the retention challenge on the next page.
 
-### 2.2 Sales by Gender (donut chart)
+###  Sales by Gender 
 
-![Sales by gender](images/cust_sales_by_gender.png)
+<img width="712" height="402" alt="cust_sales_by_gender" src="https://github.com/user-attachments/assets/1edc245e-5b25-4577-8fe3-a0c020ba7d77" />
+
 
 - Sales are almost evenly split: **Female 50.46% (\$14.81M)** and **Male 49.54% (\$14.55M)**.
 - Women make up 49.4% of customers but contribute slightly more, spending about \$1,622 each against \$1,555 for men. The gap is small, so gender is not a useful basis for targeting.
 
-### 2.3 Sales by Marital Status (donut chart)
+### Sales by Marital Status 
 
-![Sales by marital status](images/cust_sales_by_marital_status.png)
+<img width="732" height="400" alt="cust_sales_by_marital_status" src="https://github.com/user-attachments/assets/cb25b9fb-3b8a-4762-9e5c-708c13d33cba" />
+
 
 - **Married customers account for 51.73% (\$15.19M)** and **Single customers for 48.27% (\$14.17M)**.
 - Single customers are 45.8% of the base but spend more each (about \$1,673 against \$1,517 for married customers, roughly 10% more), which makes them a valuable group to keep engaged.
 
-### 2.4 Sales by Age Band (bar chart)
+### Sales by Age Band 
 
-![Sales by age band](images/cust_sales_by_age_band.png)
+<img width="772" height="470" alt="cust_sales_by_age_band" src="https://github.com/user-attachments/assets/1f84255c-e501-4193-b3a2-2e9d04e3713c" />
+
 
 - **Customers aged 35 to 44 lead with \$11.37M (38.7%)**, followed by 45 to 54 with \$9.04M (30.8%). Together these two bands produce **69.4% of sales**.
 - Sales fall away sharply after 55: \$4.10M for 55 to 64, \$1.35M for 65 to 74 and almost nothing beyond 75. The youngest band (28 to 34) contributes \$3.40M (11.6%).
 
-### 2.5 Customer by Age Band (bar chart)
+###  Customer by Age Band 
 
-![Customers by age band](images/cust_customers_by_age_band.png)
+<img width="772" height="470" alt="cust_customers_by_age_band" src="https://github.com/user-attachments/assets/4af62d57-6327-422b-a410-80856e70a578" />
+
 
 - The 35 to 54 group makes up **61.6% of customers (11,386)** but 69.4% of sales, so it over-delivers.
 - Spend per customer confirms it: about \$1,825 in the 35 to 44 band and \$1,753 in the 45 to 54 band, compared with \$1,223 for ages 28 to 34 (about a third lower) and \$1,102 for ages 65 to 74.
 - The younger band is 15.0% of customers (2,779) but only 11.6% of sales, so there is room to grow spending among younger customers.
 
-## Dashboard 3: Customer Segmentation (RFM Analysis)
+## 5.3: Customer Segmentation (RFM Analysis)
 
 **Objective:** show how customers are spread across the eight RFM segments, what each segment looks like on Recency, Frequency and Monetary value, and how healthy the customer base is overall. This is the core page of the project. The Country and Product Name slicers re-cut every chart.
 
-![Customer Segmentation page](images/page_customer_segmentation.png)
+<img width="1920" height="1080" alt="page_customer_segmentation" src="https://github.com/user-attachments/assets/a292adc3-0baf-419a-8f39-1ebae8418a0a" />
+
 
 *Page: Customer Segmentation*
 
-### 3.1 KPI cards: Needs Attention % and Doing Well %
+###  Needs Attention % and Doing Well %
 
 ![Needs Attention % and Doing Well % KPI cards](images/seg_kpi_cards.png)
 
 - **55.77% of customers (10,309) are at risk or need attention** and **44.23% (8,175) are doing well**.
 - "Doing well" customers account for 54.0% of historic revenue and the other group for 46.0% (\$13.51M), so the group needing attention represents a lot of money, not just a lot of people.
 
-### 3.2 Customer Segment Count (bar chart)
+### Customer Segment Count (bar chart)
 
 ![Customer segment count](images/seg_segment_count.png)
 
 - **Hibernating (4,103, 22.2%)** is the largest segment, followed by New Customers (3,685, 19.9%) and Need Attention (2,917, 15.8%). Only 8.5% are Champions and 4.2% Loyal.
 - The customer base is wide at the bottom and narrow at the top. Hibernating and New customers together are 42.1% of the base but contribute just 4.1% of revenue.
 
-### 3.3 Customer Segment by Average Recency (bar chart, days since last order)
+### Customer Segment by Average Recency (bar chart, days since last order)
 
 ![Average recency by segment](images/seg_avg_recency.png)
 
 - **At Risk customers have been away for 401 days on average**, more than 13 months, followed by Hibernating (290) and Can't Lose Them (284). Their window for an easy win-back is closing.
 - Champions (76 days), Potential Loyalists (72) and New Customers (70) all bought within the last quarter, which is why they score well on recency.
 
-### 3.4 Customer Segment by Average Frequency (bar chart, orders per customer)
+###  Customer Segment by Average Frequency (bar chart, orders per customer)
 
 ![Average frequency by segment](images/seg_avg_frequency.png)
 
 - **Champions average 2.97 orders** and Loyal Customers 2.39, while Hibernating customers average 1.03, in effect a single purchase.
 - Even the best customers order only about three times, so loyalty is shallow across the whole base. That explains the low company average of 1.5 orders per customer.
 
-### 3.5 Customer Segment by Average Monetary Value (bar chart, spend per customer)
+###  Customer Segment by Average Monetary Value (bar chart, spend per customer)
 
 ![Average monetary value by segment](images/seg_avg_monetary.png)
 
@@ -403,7 +384,7 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - Adding the At Risk segment, 3,289 customers (17.8%) hold **\$10.93M, 37.2% of all historic revenue**. This is the most valuable pool to win back.
 - Champions are 8.5% of customers but 26.4% of revenue, and Champions plus Loyal customers (12.6%) generate 40.9%, so protecting this top group matters just as much.
 
-### 3.6 Reading the page by country (Country slicer)
+###  Reading the page by country (Country slicer)
 
 Selecting each country in the slicer shows how customer health differs by market:
 
@@ -421,11 +402,12 @@ Selecting each country in the slicer shows how customer health differs by market
 - Australia is not risk-free: 14.6% of its customers (about 520) are Can't Lose Them, the highest share of any market, so a win-back effort there would also pay off.
 - Customer health is a **geography story, not a demographic one**. The share needing attention varies by about 5 points across age bands (53% to 58%) and by less than 1 point between genders and between marital statuses, but by nearly 13 points between countries.
 
-## Dashboard 4: Customer Details
+##  5.4: Customer Details
 
 **Objective:** give the marketing team a customer-level list so that every segment can be acted on, by filtering the page by segment, country or product.
 
-![Customer Details page](images/page_customer_details.png)
+<img width="993" height="555" alt="page_customer_details" src="https://github.com/user-attachments/assets/2b52a80d-0baa-403d-8d85-5a6212cf26a5" />
+
 
 *Page: Customer Details (first 17 of 18,484 customers shown)*
 
@@ -434,11 +416,12 @@ Selecting each country in the slicer shows how customer health differs by market
 - A win-back list is a single filter away. The five highest-spending Can't Lose Them customers (keys 12655, 13263, 12323, 12333 and 12650) are all in France. Each spent between \$10.8K and \$10.9K over four orders and last ordered 207 to 259 days before the snapshot, so they are the first people to contact.
 - The page contains names, emails and phone numbers. These are fictional sample records, but in a live setting this page should be restricted to authorised marketing users.
 
-## Dashboard 5: Marketing Actions
+##  5.5: Marketing Actions
 
 **Objective:** translate each segment into a clear description and a recommended action, so the analysis leads directly to something the marketing team can do.
 
-![Marketing Actions page](images/page_marketing_actions.png)
+<img width="993" height="554" alt="page_marketing_actions" src="https://github.com/user-attachments/assets/7d3451d2-6b03-4a5f-97fe-b0c39aa0340e" />
+
 
 *Page: Marketing Actions*
 
@@ -502,13 +485,9 @@ The dataset was not free of problems. The tables below show what was found, how 
 | **Issue found**                                                                                                                                                             | **Mitigation**                                                                                                                              | **Recommendation**                                                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | Source tables were very wide and full of unused fields (for example DimProduct had 36 columns and DimCustomer 29, including Spanish and French duplicates of the same text) | Kept only the fields needed (2 to 14 per table) and renamed the English columns, which made the model smaller and easier to follow          | Extract only the required fields at source and keep a short data dictionary           |
-| The workbook loaded with the headers as the first data row and weak data types                                                                                              | Promoted the first row to headers and set the correct type for every column in Power Query                                                  | Load from a typed source (database or CSV with a schema) so types arrive correctly    |
 | Key columns (CustomerKey, ProductKey, date keys and others) were stored as numbers and could be summed or aggregated by mistake                                             | Converted every key column to text                                                                                                          | Define identifier fields as text or key types in the source                           |
 | Columns that were empty or almost empty (CarrierTrackingNumber and CustomerPONumber are blank in all 60,398 rows; Suffix, Title and AddressLine2 are 98% to 100% blank)     | Removed them from the model because they add no analytical value                                                                            | Profile null percentages on import and exclude fields that are nearly empty           |
-| DimSalesTerritory contained an empty placeholder row (key 11 with no region or country)                                                                                     | Removed the row in Power Query so it could not produce a blank country                                                                      | Block placeholder rows at source or add a validation rule                             |
-| No single customer name field (only first and last name)                                                                                                                    | Created CustomerName by combining the two fields                                                                                            | Store a full display name in the source customer table                                |
 | Age was not stored, and 30 customers appear aged 85 or over, up to 98 (born 1910)                                                                                           | Calculated age at the last order date and grouped it in bands, keeping the oldest customers in an 85+ band (30 customers, \$4,952 of sales) | Validate birth-date ranges when data is captured and flag implausible ages            |
-| Customer names, emails and phone numbers appear on the Customer Details page                                                                                                | Records are fictional sample data, and the page is only used as a campaign list                                                             | In a live setting, restrict the page with row-level security and mask contact details |
 | Duplicate records                                                                                                                                                           | Checked for duplicate order lines and duplicate customers; none were found                                                                  | Keep a duplicate check as a standard step in the data preparation                     |
 
 ### Analytical assumptions
@@ -519,11 +498,10 @@ The dataset was not free of problems. The tables below show what was found, how 
 | 62.9% of customers have ordered only once, so Frequency cannot be split into quintiles                                                                                                                                                            | Used fixed frequency bands (1, 2, 3, 4, 5 or more orders) and quintiles for Recency and Monetary                            | Review the bands as repeat purchasing improves                                               |
 | "Doing Well" includes New Customers, who are recent but have spent little (\$150 on average)                                                                                                                                                      | Grouped segments by recency and value together and reported revenue next to customer counts so low-value groups are visible | Revisit the grouping with the business owner and track new-customer conversion               |
 | Monetary value is lifetime spend, so it shows what a customer has spent, not what can be recovered                                                                                                                                                | Described figures as "historic revenue" and avoided promising recovery amounts                                              | Pair RFM with a win-back test to measure how much revenue returns                            |
-| 2005 (July to December) and 2008 (January to July) are partial years                                                                                                                                                                              | Pointed out the partial years and used order-date comparisons for like-for-like statements                                  | Use year-to-date comparisons for trend charts                                                |
+                                             |
 | The Sales Trend chart uses the date table related through the due date, not the order date, so a few orders near year ends are counted in the following year. By order date the totals are \$3.27M, \$6.53M, \$9.79M and \$9.77M for 2005 to 2008 | Kept the dashboard figures and stated the order-date totals where the difference matters                                    | Relate the date table through the order date and use the due date only for delivery analysis |
 | Sales amounts come from several currency keys in the source                                                                                                                                                                                       | Treated all amounts as a single reporting currency, as provided in the source                                               | Confirm the reporting currency in the data dictionary                                        |
 | The youngest customers in the data are aged 28, so younger buyers cannot be assessed                                                                                                                                                              | Used age bands that start at 28 to 34                                                                                       | Capture the full age range or confirm the target customer age                                |
-| The Segment Sort in the RFM Table and the Sort Order in the Segment Strategy table list At Risk and Can't Lose Them in different orders                                                                                                           | No effect on any figure; each visual uses its own table consistently                                                        | Use one shared sort order for the eight segments                                             |
 | The data shows associations, not causes (for example why US customers lapse)                                                                                                                                                                      | Kept wording to what the data shows and listed causes (pricing, delivery, service) as things to investigate                 | Combine RFM with survey and service data to confirm causes                                   |
 
 
