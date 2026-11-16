@@ -254,6 +254,7 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 [View Interactive Dashboard](https://drive.google.com/file/d/1i28lpUCG-D5fGwV6rPsti2Wij9koDWF1/view?usp=sharing)
 
 
+
 ## 5.1: Executive Overview
 
 **Objective:** give leadership a quick read on sales, cost and profit, the best-selling products, the sales trend and where revenue comes from.
@@ -263,11 +264,15 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 *Page: Executive Overview*
 
+
+
 ### Sales, Profit, Margin and Cost
 
 - Sales of **\$29.36M** less product cost of **\$17.28M** leave a profit of **\$12.08M**, a **41.15% margin**. Costs take 58.85 cents of every sales dollar.
 - The margin has held up as the business grew: 40.2% in 2005, 40.5% in 2006, 41.6% in 2007 and 41.4% for January to July 2008 (calculated by order date). Growth was not bought with lower margins.
 - The average order is worth about **\$1,061** and the average customer about **\$1,588**, but with only 1.5 orders per customer the second figure is the one with room to grow.
+
+
 
 ###  Top Selling Products (top 5 by number of orders)
 
@@ -278,6 +283,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - All five are low-priced accessories and consumables. Together they appear in about 45% of all orders but bring in only \$131K (0.4% of sales), whereas the Mountain-200 bike range alone generates 27% of sales.
 - The best sellers therefore bring customers through the door and are natural **entry products** to bundle with higher-value bikes, rather than being the main source of revenue.
 
+
+
 ### Sales Trend 
 
 <img width="700" height="400" alt="exec_sales_trend" src="https://github.com/user-attachments/assets/3819606e-69cc-47be-bfa9-c02dc92572a8" />
@@ -286,6 +293,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - Sales rose from **\$2.99M in 2005 to \$10.42M in 2008**, more than three times higher, with each year above the one before it.
 - Both end years are partial (2005 covers July to December, 2008 covers January to July), which makes the growth stronger than it looks: by order date, January to July 2008 sales of \$9.77M had already matched all of 2007 (\$9.79M).
 - Growth came mainly from **more customers**: customers placing orders rose from 1,013 in 2005 to 2,677, 9,309 and 11,377 in the following years. Acquisition has been strong, which makes the low repeat rate more important.
+
+
 
 ### Total Sales by Country
 
@@ -296,6 +305,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - Taken as regions, North America (US and Canada) delivers 38.7% of sales and Europe (UK, Germany, France) 30.4%, which is about the same as Australia alone.
 - Australia is the most productive market per customer. It has only 19.4% of customers (3,591) but 30.9% of sales, which means **\$2,523 per customer against \$1,201 in the US** and 1.87 orders per customer against 1.22. The US earns its place through volume (7,819 customers, 42.3% of the base), not depth.
 
+
+
 ## 5.2: Customer Overview
 
 **Objective:** understand who the customers are by gender, marital status and age, and how much each group contributes to sales, so that marketing can be aimed at the right people.
@@ -305,9 +316,13 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 *Page: Customer Overview*
 
+
+
 ###  Customers and Orders
 
 - **18,484 customers** placed **27,659 orders**, an average of 1.50 orders each. About 63% of customers have ordered only once, which frames the retention challenge on the next page.
+
+
 
 ###  Sales by Gender 
 
@@ -317,6 +332,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - Sales are almost evenly split: **Female 50.46% (\$14.81M)** and **Male 49.54% (\$14.55M)**.
 - Women make up 49.4% of customers but contribute slightly more, spending about \$1,622 each against \$1,555 for men. The gap is small, so gender is not a useful basis for targeting.
 
+
+
 ### Sales by Marital Status 
 
 <img width="732" height="400" alt="cust_sales_by_marital_status" src="https://github.com/user-attachments/assets/cb25b9fb-3b8a-4762-9e5c-708c13d33cba" />
@@ -325,6 +342,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - **Married customers account for 51.73% (\$15.19M)** and **Single customers for 48.27% (\$14.17M)**.
 - Single customers are 45.8% of the base but spend more each (about \$1,673 against \$1,517 for married customers, roughly 10% more), which makes them a valuable group to keep engaged.
 
+
+
 ### Sales by Age Band 
 
 <img width="772" height="470" alt="cust_sales_by_age_band" src="https://github.com/user-attachments/assets/1f84255c-e501-4193-b3a2-2e9d04e3713c" />
@@ -332,6 +351,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 - **Customers aged 35 to 44 lead with \$11.37M (38.7%)**, followed by 45 to 54 with \$9.04M (30.8%). Together these two bands produce **69.4% of sales**.
 - Sales fall away sharply after 55: \$4.10M for 55 to 64, \$1.35M for 65 to 74 and almost nothing beyond 75. The youngest band (28 to 34) contributes \$3.40M (11.6%).
+
+
 
 ###  Customer by Age Band 
 
@@ -342,6 +363,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - Spend per customer confirms it: about \$1,825 in the 35 to 44 band and \$1,753 in the 45 to 54 band, compared with \$1,223 for ages 28 to 34 (about a third lower) and \$1,102 for ages 65 to 74.
 - The younger band is 15.0% of customers (2,779) but only 11.6% of sales, so there is room to grow spending among younger customers.
 
+
+
 ## 5.3: Customer Segmentation (RFM Analysis)
 
 **Objective:** show how customers are spread across the eight RFM segments, what each segment looks like on Recency, Frequency and Monetary value, and how healthy the customer base is overall. This is the core page of the project. The Country and Product Name slicers re-cut every chart.
@@ -350,6 +373,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 
 *Page: Customer Segmentation*
+
+
 
 ###  Needs Attention % and Doing Well %
 
@@ -360,6 +385,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - **55.77% of customers (10,309) are at risk or need attention** and **44.23% (8,175) are doing well**.
 - "Doing well" customers account for 54.0% of historic revenue and the other group for 46.0% (\$13.51M), so the group needing attention represents a lot of money, not just a lot of people.
 
+
+
 ### Customer Segment Count 
 
 <img width="774" height="474" alt="seg_segment_count" src="https://github.com/user-attachments/assets/1e60376f-11f8-4567-b981-b31d297a802f" />
@@ -367,6 +394,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 - **Hibernating (4,103, 22.2%)** is the largest segment, followed by New Customers (3,685, 19.9%) and Need Attention (2,917, 15.8%). Only 8.5% are Champions and 4.2% Loyal.
 - The customer base is wide at the bottom and narrow at the top. Hibernating and New customers together are 42.1% of the base but contribute just 4.1% of revenue.
+
+
 
 ### Customer Segment by Average Recency (days since last order)
 
@@ -376,6 +405,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - **At Risk customers have been away for 401 days on average**, more than 13 months, followed by Hibernating (290) and Can't Lose Them (284). Their window for an easy win-back is closing.
 - Champions (76 days), Potential Loyalists (72) and New Customers (70) all bought within the last quarter, which is why they score well on recency.
 
+
+
 ###  Customer Segment by Average Frequency (orders per customer)
 
 <img width="774" height="418" alt="seg_avg_frequency" src="https://github.com/user-attachments/assets/0388a2cf-d53a-41d5-b1bd-05cdac342b87" />
@@ -383,6 +414,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 
 - **Champions average 2.97 orders** and Loyal Customers 2.39, while Hibernating customers average 1.03, in effect a single purchase.
 - Even the best customers order only about three times, so loyalty is shallow across the whole base. That explains the low company average of 1.5 orders per customer.
+
+
 
 ###  Customer Segment by Average Monetary Value (spend per customer)
 
@@ -393,6 +426,8 @@ The report has seven pages. The Home page and the Insights & Recommendations pag
 - **Can't Lose Them are lapsed Champions.** They spent as much as Champions but last bought about 9 months ago. These 1,273 customers (6.9% of the base) hold **\$6.65M (22.7%) of historic revenue**.
 - Adding the At Risk segment, 3,289 customers (17.8%) hold **\$10.93M, 37.2% of all historic revenue**. This is the most valuable pool to win back.
 - Champions are 8.5% of customers but 26.4% of revenue, and Champions plus Loyal customers (12.6%) generate 40.9%, so protecting this top group matters just as much.
+
+
 
 ###  Reading the page by country (Country slicer)
 
@@ -412,6 +447,8 @@ Selecting each country in the slicer shows how customer health differs by market
 - Australia is not risk-free: 14.6% of its customers (about 520) are Can't Lose Them, the highest share of any market, so a win-back effort there would also pay off.
 - Customer health is a **geography story, not a demographic one**. The share needing attention varies by about 5 points across age bands (53% to 58%) and by less than 1 point between genders and between marital statuses, but by nearly 13 points between countries.
 
+
+
 ##  5.4: Customer Details
 
 **Objective:** give the marketing team a customer-level list so that every segment can be acted on, by filtering the page by segment, country or product.
@@ -425,6 +462,8 @@ Selecting each country in the slicer shows how customer health differs by market
 - The score is easy to trace. For example, customer 11001 scores **535** (Recency 5, Frequency 3, Monetary 5) and is a Champion, while customer 11000 scores **235** (Recency 2, Frequency 3, Monetary 5), which makes them Can't Lose Them: a big spender who has not bought for a while.
 - A win-back list is a single filter away. The five highest-spending Can't Lose Them customers (keys 12655, 13263, 12323, 12333 and 12650) are all in France. Each spent between \$10.8K and \$10.9K over four orders and last ordered 207 to 259 days before the snapshot, so they are the first people to contact.
 - The page contains names, emails and phone numbers. These are fictional sample records, but in a live setting this page should be restricted to authorised marketing users.
+
+
 
 ##  5.5: Marketing Actions
 
